@@ -2,7 +2,7 @@
 
 # IN267 - Have Fun with SAP Integration Suite: API Management and 
 
-
+![Pic 1](images/IN265-1.jpeg)
 
 ## Description
 
