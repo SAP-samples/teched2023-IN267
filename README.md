@@ -1,6 +1,6 @@
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2023-IN267)](https://api.reuse.software/info/github.com/SAP-samples/teched2023-IN267)
 
-# IN267 - Have Fun with SAP Integration Suite: API Management and 
+# IN267 - Have Fun with SAP Integration Suite: API Management and Graph
 
 ![Pic 1](images/IN265-1.jpeg)
 
