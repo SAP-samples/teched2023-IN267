@@ -110,11 +110,11 @@ When the Navigator comes up, select the data graph you just created, then select
 
 The Graph navigator is connected to live data, the example comes from a real system.
 
-Now, click on the `Try Out` tab, and click `Run` to see how to execute an OData query. By changing the query, you can get powerful results. For instance, you could try the following queries (don’t copy paste – type these in and be impressed by the OData auto-completion feature of the Graph Navigator ):
+Now, click on the `Try Out` tab, and click `Run` to see how to execute an OData query. By changing the query, you can get powerful results. For instance, you could try the following queries (don’t copy paste – type these in and be impressed by the OData auto-completion feature of the Graph Navigator):
 
-```/bestrun/RatedPartner?\$top=10&\$expand=location&\$select=name,rating```
+```/bestrun/RatedPartner?$top=10&$expand=location&$select=name,rating```
 
-```/bestrun/RatedPartner?\$top=30&\$filter=rating/Moodys eq 'AAB'```
+```/bestrun/RatedPartner?$top=30&$filter=rating/Moodys eq 'AAB'```
 
 Note that the data graph also includes other entities (in other namespaces) in the data graph, and you can still access these other entities, using the same Graph API and URL.
 
@@ -187,11 +187,11 @@ In the terminal that opens, type:
 
 On BLR13 (odd user id):
 
-```curl -X POST <https://teched23blr13.authentication.ap10.hana.ondemand.com/oauth/token> -H "Content-Type:application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "client_id=sb-90232f75-ebad-47e9-8493-08feb06da7b9!b30456\|sap-graph!b24139" -d "client_secret=1c20ad72-12f9-418b-af1f-a8453dac5c24\$LXIq-pMUivmjcBYvF_omsogO1KyAM9hTi5nQYEmbEiM="```
+```curl -X POST <https://teched23blr13.authentication.ap10.hana.ondemand.com/oauth/token> -H "Content-Type:application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "client_id=sb-90232f75-ebad-47e9-8493-08feb06da7b9!b30456\|sap-graph!b24139" -d "client_secret=1c20ad72-12f9-418b-af1f-a8453dac5c24LXIq-pMUivmjcBYvF_omsogO1KyAM9hTi5nQYEmbEiM="```
 
 On BLR08 (even user id):
 
-```curl -X POST <https://teched23blr08.authentication.ap10.hana.ondemand.com/oauth/token> -H "Content-Type:application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "client_id=sb-8906f3c8-452d-4215-baf4-29ed89d16df1!b28124\|sap-graph!b24139" -d "client_secret=4cc39d9d-5e98-4164-954d-6b2cc0326249\$iZEnuNDvCpX0yeP86SzyA-BnudBdudzFiopbkJzXYzs="```
+```curl -X POST <https://teched23blr08.authentication.ap10.hana.ondemand.com/oauth/token> -H "Content-Type:application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "client_id=sb-8906f3c8-452d-4215-baf4-29ed89d16df1!b28124\|sap-graph!b24139" -d "client_secret=4cc39d9d-5e98-4164-954d-6b2cc0326249iZEnuNDvCpX0yeP86SzyA-BnudBdudzFiopbkJzXYzs="```
 
 If all goes well, you will see a response with an access token.
 
@@ -199,19 +199,19 @@ If all goes well, you will see a response with an access token.
 
 Carefully select and copy the string.
 
-We will also need the URL of the API proxy. But remember, that is the URL of the `bestrun` namespace. You need to append an entity query, for example, `/RatedPartner?\$top=1` to that URL.
+We will also need the URL of the API proxy. But remember, that is the URL of the `bestrun` namespace. You need to append an entity query, for example, `/RatedPartner?$top=1` to that URL.
 
 So, now that we have a token and URL, enter the following curl command,
 
-```curl -X GET \<url\> -H "Authorization: Bearer \<access-token\>"```
+```curl -X GET <url> -H "Authorization: Bearer <access-token>"```
 
 and substitute \<url\> with the URL of the API proxy with the entity query, and substitute \<access-token\> with the access token you just copied:
 
-```curl -X GET https://teched23blr... /`RatedPartner?\$top=1` -H "Authorization: Bearer eyJh...Q"```
+```curl -X GET https://teched23blr... `RatedPartner?$top=1` -H "Authorization: Bearer eyJh...Q"```
 
 The response should look like this:
 
-`{"@odata.context":"\$metadata\#RatedPartner","value":[{"id":"my.custom\~1000000","name":"HA_SUPPLIER","isActive":true,"rating":{"Moodys":"ABB","Fitch":"B","StandardPoor":"B+","totalScore":"acceptable"}}]}`
+`{"@odata.context":"$metadata\#RatedPartner","value":[{"id":"my.custom\~1000000","name":"HA_SUPPLIER","isActive":true,"rating":{"Moodys":"ABB","Fitch":"B","StandardPoor":"B+","totalScore":"acceptable"}}]}`
 
 Repeat this last command a few times. What happens? Cool, no?
 
