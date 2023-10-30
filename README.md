@@ -27,7 +27,7 @@ SAP is aware of the importance of APIs, their security, and management. The API 
 
 In this session, we will take a deeper look at SAP’s API Management solution, by building a data graph extension, and protecting this with an API Proxy with the appropriate security policies.
 
-Start the exercises [here](exercise/main.md).
+Start the exercises [here](exercises/ex0/README.md).
 
 **IMPORTANT**
 
