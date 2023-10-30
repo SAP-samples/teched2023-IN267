@@ -82,7 +82,7 @@ On the `Business Data Graphs` tab, and start the wizard, `Create => New business
 
 ![](images/77c3b6320f2aefed38c9f3f9529cb539.png)
 
-Enter an ID for the data graph. This name must be unique, and therefore `must` start with `uNN`, where `NN` is your user id`.` For instance, if your tenant-user is “user31”, you can name the data graph `u31-rp`.
+Enter an ID for the data graph. This name must be unique, and therefore _must_ start with `uNN`, where `NN` is your user id. For instance, if your tenant-user is `user31`, you can name the data graph `u31-rp`.
 
 ![](images/89ea25664aff1a296bb84e39a811b9ef.png)
 
