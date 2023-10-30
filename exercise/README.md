@@ -187,11 +187,11 @@ In the terminal that opens, type:
 
 On BLR13 (odd user id):
 
-```curl -X POST <https://teched23blr13.authentication.ap10.hana.ondemand.com/oauth/token> -H "Content-Type:application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "client_id=sb-90232f75-ebad-47e9-8493-08feb06da7b9!b30456\|sap-graph!b24139" -d "client_secret=1c20ad72-12f9-418b-af1f-a8453dac5c24LXIq-pMUivmjcBYvF_omsogO1KyAM9hTi5nQYEmbEiM="```
+```curl -X POST <https://teched23blr13.authentication.ap10.hana.ondemand.com/oauth/token> -H "Content-Type:application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "client_id=sb-90232f75-ebad-47e9-8493-08feb06da7b9!b30456\|sap-graph!b24139" -d "client_secret=1c20ad72-12f9-418b-af1f-a8453dac5c24\$LXIq-pMUivmjcBYvF_omsogO1KyAM9hTi5nQYEmbEiM="```
 
 On BLR08 (even user id):
 
-```curl -X POST <https://teched23blr08.authentication.ap10.hana.ondemand.com/oauth/token> -H "Content-Type:application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "client_id=sb-8906f3c8-452d-4215-baf4-29ed89d16df1!b28124\|sap-graph!b24139" -d "client_secret=4cc39d9d-5e98-4164-954d-6b2cc0326249iZEnuNDvCpX0yeP86SzyA-BnudBdudzFiopbkJzXYzs="```
+```curl -X POST <https://teched23blr08.authentication.ap10.hana.ondemand.com/oauth/token> -H "Content-Type:application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "client_id=sb-8906f3c8-452d-4215-baf4-29ed89d16df1!b28124\|sap-graph!b24139" -d "client_secret=4cc39d9d-5e98-4164-954d-6b2cc0326249\$iZEnuNDvCpX0yeP86SzyA-BnudBdudzFiopbkJzXYzs="```
 
 If all goes well, you will see a response with an access token.
 
