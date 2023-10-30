@@ -6,15 +6,79 @@
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2022 session called Session ID - Session Title.  
+This repository contains the material for the SAP TechEd 2022 session called Session ID - Session Title. 
+
+### Before you start 
+
+This hands-on exercise, designed for TechEd, is performed by multiple participants in parallel, using production tenants with shared resources in two shared SAP Business Technology Platform (BTP) subaccounts. This means: 
+
+ 
+
+Use the user that we provide only for this exercise, and not for anything else.  
+
+Strictly follow the instructions, regarding naming conventions of the artefacts you will create.  
+
+Ignore other artefacts, created by other participants, that may appear in your shared account..  
+
+ 
+
+The TechEd accounts were pre-configured with all the roles and definitions you need to complete this exercise. 
 
 ## Overview
 
 This session introduces attendees to...
 
+### The story 
+
+You are the API Administrator of BestRun. 
+
+ 
+
+One of your clients has asked you for an API to access the credit rating of BestRun’s worldwide suppliers. These suppliers are maintained as “Business Partners” in your corporate SAP S/4HANA system, but without credit rating information. Your colleague has written a CAP-based application that extends the SAP S/4HANA partner data with credit ratings.  
+
+ 
+
+Your task is to design a secure and easy-to-use API for your client.  
+
 ## Requirements
 
 The requirements to follow the exercises in this repository are...
+
+### The custom model extension 
+
+Suppliers are maintained in the SAP S/4HANA system, and accessible via the A_BusinessPartner API.  
+
+ 
+
+We don’t want to give our client direct access to this API. Firstly, the credentials are highly confidential, and unauthorized usage might impact our business. Secondly, the A_BusinessPartner entity is very complex with well over a hundred attributes (see illustration), which may overwhelm our client, who only needs the partner address and credit ratings. Thirdly, and most importantly, the credit ratings of the partners are managed in a separate CAP application on BTP.  
+
+ 
+
+Our goal is to provide the client with a simplified view of the partners, their location, and their credit ratings, via a single API, using the Graph capability of API Management and further secured by an API proxy.  
+
+ 
+
+The simple CAP financials application written by our colleague, has a RATINGS entity that matches the business partner on its key (BP), and looks like this, based on a very simple corresponding CDS entity specification. 
+
+The application is poorly secured by basic authentication and runs on BTP. Again, we do not want to provide direct access to it from our client, with whom we would have to share the user/password to the application. And, the client would have to learn how to make multiple queries to two different applications, and then combine the data, just to get the information they need.  
+
+ 
+So how do we solve this?  
+
+ 
+
+The Graph feature of API Management supports custom extensions, technically entities with views on one or more underlying data sources. We will design such a custom entity.  
+
+This custom entity will combine partner info from the A_BusinessPartner entity in SAP S/4HANA, and the credit ratings from the RATINGS entity in the CAP application. We will call it RatedPartner within the bestrun namespace, shown at the left of the following illustration. 
+
+
+The easiest way to develop such an extension entity is to use the powerful graphical extension editor. Unfortunately, this editor was not yet available at the time we put this course together in mid-2023, and so, instead, we will define the extension specification as a JSON specification, as seen in the box below.
+
+You should be able to understand how this works. We define the new entity bestrun.RatedPartner, and the two source entities it uses. Then, we define a list of attributes and their derivation from corresponding source attributes, using “transform” functions. You can study the detailed specification in the Graph documentation. 
+
+ 
+
+This extension specification was already imported, and available as my-ratedpartner. 
 
 ## Exercises
 
