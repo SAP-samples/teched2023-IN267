@@ -40,7 +40,9 @@ Click on Next and check the two data sources we will use for our data graph.
 Click Next and in the next step select the my-ratedpartner model extension. Click Next again and wait about 20 seconds. The Graph system is checking your data sources, discovering and connecting entities, and creating a data graph configuration. When complete, you will see the configuration. If you made a mistake, check the logs, cancel, and try again.
 
 The configuration can be fine-tuned for complex use cases and landscapes, but we just click on Create and wait about two minutes, for the system to instantiate and run the data graph. During this time, you will see a status of Processing. 
+
 ![Pic 6](images/IN267_ex0_6.png)
+
 When the status turns to “Available”, the URL is live, and we are ready to check it out, using the Graph Navigator.
 
 ## Step 3 – Use the Graph Navigator
@@ -82,12 +84,13 @@ From the menu, click Design => APIs and then Create.
 ![Pic 9](images/IN267_ex0_9.png)
 
 A form pops up.
+
 The form must be filled in as follows:
-•	Select the “URL” radio button.
-•	Paste the data graph URL you just copied in the target URL; then append /bestrun to the end of the URL. 
-•	Name the API proxy. This name must be unique, and therefore must start with uNN, where NN is your tenant user id. For instance, if your tenant-user is “user31”, you can name the API proxy u31-proxy.
-•	Copy the same name into the title and API Base Path fields.
-•	Click Create.
+*	Select the “URL” radio button.
+*	Paste the data graph URL you just copied in the target URL; then append /bestrun to the end of the URL. 
+*	Name the API proxy. This name must be unique, and therefore must start with uNN, where NN is your tenant user id. For instance, if your tenant-user is “user31”, you can name the API proxy u31-proxy.
+*	Copy the same name into the title and API Base Path fields.
+*	Click Create.
 
 ![Pic 10](images/IN267_ex0_10.png)
 
@@ -186,20 +189,20 @@ We now need to insert the client ID and client secret in the getcredential polic
 ![Pic 18](images/IN267_ex0_18.png)
 
 BLR13 OAuth credentials (odd user Id)
-Client id	sb-90232f75-ebad-47e9-8493-08feb06da7b9!b30456|sap-graph!b24139
-Client secret	1c20ad72-12f9-418b-af1f-a8453dac5c24$LXIq-pMUivmjcBYvF_omsogO1KyAM9hTi5nQYEmbEiM=
+Client id	 sb-90232f75-ebad-47e9-8493-08feb06da7b9!b30456|sap-graph!b24139
+Client secret	 1c20ad72-12f9-418b-af1f-a8453dac5c24$LXIq-pMUivmjcBYvF_omsogO1KyAM9hTi5nQYEmbEiM= 
 
 BLR08 OAuth credentials (even user ids)
-Client id	sb-8906f3c8-452d-4215-baf4-29ed89d16df1!b28124|sap-graph!b24139
-Client secret	4cc39d9d-5e98-4164-954d-6b2cc0326249$iZEnuNDvCpX0yeP86SzyA-BnudBdudzFiopbkJzXYzs=
+Client id sb-8906f3c8-452d-4215-baf4-29ed89d16df1!b28124|sap-graph!b24139
+Client secret 4cc39d9d-5e98-4164-954d-6b2cc0326249$iZEnuNDvCpX0yeP86SzyA-BnudBdudzFiopbkJzXYzs=
 
 Then select the getoauthtoken policy. Change the access token URL as follows: 
 
 ![Pic 19](images/IN267_ex0_19.png)
 
-BLR13	https://teched23blr13.authentication.ap10.hana.ondemand.com/oauth/token?grant_type=client_credentials
+| BLR13	| https://teched23blr13.authentication.ap10.hana.ondemand.com/oauth/token?grant_type=client_credentials |
 
-BLR08	https://teched23blr08.authentication.ap10.hana.ondemand.com/oauth/token?grant_type=client_credentials
+| BLR08	| https://teched23blr08.authentication.ap10.hana.ondemand.com/oauth/token?grant_type=client_credentials |
 
 Ok. We are almost done… Click Update, then Save, and then Click to Deploy and Yes to deploy the changes.
 
@@ -207,12 +210,12 @@ Now, enter the URL of the API proxy in a browser tab (remember? You can find the
 
 With the additional policies from the policy template, the API proxy now handles the OAuth protocol on behalf of the caller, and the data graph is available for “anonymous” usage. 
 
-Refresh the page. After 2 or 3 times (depending on how you configured the quota policy), access will be denied. 
-![image](https://github.com/SAP-samples/teched2023-IN267/assets/149037633/3b225249-6a48-470f-a842-b1677e714291)
+Refresh the page. After 2 or 3 times (depending on how you configured the quota policy), access will be denied.
 
 ## Step 7 – Publish the URL
 
 What is an API good for, if developers don’t know about it?
+
 In this step, we will create an API grouping, called a Product, and then publish the group of APIs to the API Business Hub Enterprise (ABHE), where developers with be able to learn about the API.
 
 From the menu, click Design => APIs, click on the Products tab and then Create. Give the product a unique name, like u31-myproduct:
