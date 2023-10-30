@@ -158,7 +158,7 @@ Select the `ProxyEndPoint`, and then its `Preflow`. Now, on the right, scroll un
 
 ![](images/5c46e240b6b280c7d0ba73d6dc1078d9.png)
 
-Click on the plus (`+`) and give it a name, e.g. `my-quota and Add`. This will add the policy to API Proxy.
+Click on the plus (`+`) and give it a name, e.g. `my-quota`, and press `Add`. This will add the policy to API Proxy.
 
 At the bottom you will find the policy configuration:
 
