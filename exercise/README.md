@@ -144,8 +144,7 @@ The form must be filled in as follows:
 
     ![](images/b0fa2362eb9181c0992265cb25c65077.png)
 
--   Click `Save.  
-    `
+-   Click `Save`.
 
 ![](images/375b07d649fe5b59241ee097b4832bf8.png)
 
