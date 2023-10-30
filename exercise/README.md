@@ -82,7 +82,7 @@ On the `Business Data Graphs` tab, and start the wizard, `Create => New business
 
 ![](images/77c3b6320f2aefed38c9f3f9529cb539.png)
 
-Enter an ID for the data graph. This name must be unique, and therefore `must` start with `uNN`, where `NN` is your user id`.` For instance, if your tenant-user is “user31”, you can name the data graph `u31-rp`.
+Enter an ID for the data graph. This name must be unique, and therefore _must_ start with `uNN`, where `NN` is your user id. For instance, if your tenant-user is `user31`, you can name the data graph `u31-rp`.
 
 ![](images/89ea25664aff1a296bb84e39a811b9ef.png)
 
@@ -110,11 +110,11 @@ When the Navigator comes up, select the data graph you just created, then select
 
 The Graph navigator is connected to live data, the example comes from a real system.
 
-Now, click on the `Try Out` tab, and click `Run` to see how to execute an OData query. By changing the query, you can get powerful results. For instance, you could try the following queries (don’t copy paste – type these in and be impressed by the OData auto-completion feature of the Graph Navigator ):
+Now, click on the `Try Out` tab, and click `Run` to see how to execute an OData query. By changing the query, you can get powerful results. For instance, you could try the following queries (don’t copy paste – type these in and be impressed by the OData auto-completion feature of the Graph Navigator):
 
-```/bestrun/RatedPartner?\$top=10&\$expand=location&\$select=name,rating```
+```/bestrun/RatedPartner?$top=10&$expand=location&$select=name,rating```
 
-```/bestrun/RatedPartner?\$top=30&\$filter=rating/Moodys eq 'AAB'```
+```/bestrun/RatedPartner?$top=30&$filter=rating/Moodys eq 'AAB'```
 
 Note that the data graph also includes other entities (in other namespaces) in the data graph, and you can still access these other entities, using the same Graph API and URL.
 
@@ -126,7 +126,7 @@ As we saw, the Graph API is a powerful abstraction, providing access to the unde
 
 In the following step, we will add an API Proxy to the Graph API, which will have two purposes: one, it will limit access only to the new RatedPartner URL, and two, it will limit access to only three calls per minute.
 
-You should still be on the Graph page in the SAP Integration Suite (if not, click `Design => Graph).` Find the data graph we just created in the list. Carefully *copy* the URL of that data graph.
+You should still be on the Graph page in the SAP Integration Suite (if not, click `Design => Graph`). Find the data graph we just created in the list. Carefully *copy* the URL of that data graph.
 
 From the menu, click `Design => APIs` and then `Create`.
 
@@ -144,8 +144,7 @@ The form must be filled in as follows:
 
     ![](images/b0fa2362eb9181c0992265cb25c65077.png)
 
--   Click `Save.  
-    `
+-   Click `Save`.
 
 ![](images/375b07d649fe5b59241ee097b4832bf8.png)
 
@@ -159,7 +158,7 @@ Select the `ProxyEndPoint`, and then its `Preflow`. Now, on the right, scroll un
 
 ![](images/5c46e240b6b280c7d0ba73d6dc1078d9.png)
 
-Click on the plus (`+`) and give it a name, e.g. `my-quota and Add`. This will add the policy to API Proxy.
+Click on the plus (`+`) and give it a name, e.g. `my-quota`, and press `Add`. This will add the policy to API Proxy.
 
 At the bottom you will find the policy configuration:
 
@@ -199,19 +198,19 @@ If all goes well, you will see a response with an access token.
 
 Carefully select and copy the string.
 
-We will also need the URL of the API proxy. But remember, that is the URL of the `bestrun` namespace. You need to append an entity query, for example, `/RatedPartner?\$top=1` to that URL.
+We will also need the URL of the API proxy. But remember, that is the URL of the `bestrun` namespace. You need to append an entity query, for example, `/RatedPartner?$top=1` to that URL.
 
 So, now that we have a token and URL, enter the following curl command,
 
-```curl -X GET \<url\> -H "Authorization: Bearer \<access-token\>"```
+```curl -X GET <url> -H "Authorization: Bearer <access-token>"```
 
 and substitute \<url\> with the URL of the API proxy with the entity query, and substitute \<access-token\> with the access token you just copied:
 
-```curl -X GET https://teched23blr... /`RatedPartner?\$top=1` -H "Authorization: Bearer eyJh...Q"```
+```curl -X GET https://teched23blr.../RatedPartner?$top=1` -H "Authorization: Bearer eyJh...Q"```
 
 The response should look like this:
 
-`{"@odata.context":"\$metadata\#RatedPartner","value":[{"id":"my.custom\~1000000","name":"HA_SUPPLIER","isActive":true,"rating":{"Moodys":"ABB","Fitch":"B","StandardPoor":"B+","totalScore":"acceptable"}}]}`
+`{"@odata.context":"$metadata#RatedPartner","value":[{"id":"my.custom\~1000000","name":"HA_SUPPLIER","isActive":true,"rating":{"Moodys":"ABB","Fitch":"B","StandardPoor":"B+","totalScore":"acceptable"}}]}`
 
 Repeat this last command a few times. What happens? Cool, no?
 
@@ -262,7 +261,7 @@ Then select the `getoauthtoken` policy. Change the access token URL as follows:
 
 Ok. We are almost done… Click `Update`, then `Save`, and then `Click to Deploy` and `Yes` to deploy the changes.
 
-Now, enter the URL of the API proxy in a browser tab (remember? You can find the URL in the list of API proxies). Remember to append, for example, `/RatedPartner?\$top=3,` in order to see a bit of data.
+Now, enter the URL of the API proxy in a browser tab (remember? You can find the URL in the list of API proxies). Remember to append, for example, `/RatedPartner?$top=3,` in order to see a bit of data.
 
 With the additional policies from the policy template, the API proxy now handles the OAuth protocol on behalf of the caller, and the data graph is available for “anonymous” usage.
 
