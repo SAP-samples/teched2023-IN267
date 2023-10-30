@@ -207,7 +207,7 @@ So, now that we have a token and URL, enter the following curl command,
 
 and substitute \<url\> with the URL of the API proxy with the entity query, and substitute \<access-token\> with the access token you just copied:
 
-```curl -X GET https://teched23blr... `RatedPartner?$top=1` -H "Authorization: Bearer eyJh...Q"```
+```curl -X GET https://teched23blr.../RatedPartner?$top=1` -H "Authorization: Bearer eyJh...Q"```
 
 The response should look like this:
 
