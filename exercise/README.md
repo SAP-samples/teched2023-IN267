@@ -240,7 +240,7 @@ We now need to insert the client ID and client secret in the `getcredential` pol
 ![](images/d6e1d8fd4ae6ffb530e63c1f55eb6feb.png)
 
 **BLR13 OAuth credentials (odd user Id)**
-| | |
+
 | Client id                                 | sb-90232f75-ebad-47e9-8493-08feb06da7b9!b30456\|sap-graph!b24139                   |
 |---------------|------------------------------------------------------------------------------------|
 | Client secret                             | 1c20ad72-12f9-418b-af1f-a8453dac5c24\$LXIq-pMUivmjcBYvF_omsogO1KyAM9hTi5nQYEmbEiM= |
