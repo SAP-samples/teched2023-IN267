@@ -238,17 +238,17 @@ As an administrator, you can manage how developers access information on this po
 
 Now click on a product tile, and then Subscribe, => Create New Application:
 
-![Pic 23](images/IN267_ex0_23.png)
+![Pic 25](images/IN267_ex0_25.png)
 
 Provide a title, and check Create this application on behalf of someone else. Select one of the registered developers for whom you are generating the credentials, from the dropdown
 
 
-![Pic 24](images/IN267_ex0_24.png)
+![Pic 23](images/IN267_ex0_23.png)
 
 And, finally, add the product that we just created in step 7, by clicking on the + box:
 
 
-![Pic 25](images/IN267_ex0_25.png)
+![Pic 24](images/IN267_ex0_24.png)
 
 And click OK and then Save. 
 
