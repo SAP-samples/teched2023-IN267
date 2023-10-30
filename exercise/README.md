@@ -261,7 +261,7 @@ Then select the `getoauthtoken` policy. Change the access token URL as follows:
 
 Ok. We are almost done… Click `Update`, then `Save`, and then `Click to Deploy` and `Yes` to deploy the changes.
 
-Now, enter the URL of the API proxy in a browser tab (remember? You can find the URL in the list of API proxies). Remember to append, for example, `/RatedPartner?\$top=3,` in order to see a bit of data.
+Now, enter the URL of the API proxy in a browser tab (remember? You can find the URL in the list of API proxies). Remember to append, for example, `/RatedPartner?$top=3,` in order to see a bit of data.
 
 With the additional policies from the policy template, the API proxy now handles the OAuth protocol on behalf of the caller, and the data graph is available for “anonymous” usage.
 
