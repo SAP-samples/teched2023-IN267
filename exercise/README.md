@@ -126,7 +126,7 @@ As we saw, the Graph API is a powerful abstraction, providing access to the unde
 
 In the following step, we will add an API Proxy to the Graph API, which will have two purposes: one, it will limit access only to the new RatedPartner URL, and two, it will limit access to only three calls per minute.
 
-You should still be on the Graph page in the SAP Integration Suite (if not, click `Design => Graph).` Find the data graph we just created in the list. Carefully *copy* the URL of that data graph.
+You should still be on the Graph page in the SAP Integration Suite (if not, click `Design => Graph`). Find the data graph we just created in the list. Carefully *copy* the URL of that data graph.
 
 From the menu, click `Design => APIs` and then `Create`.
 
