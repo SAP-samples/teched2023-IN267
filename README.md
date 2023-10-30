@@ -6,16 +6,14 @@
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2022 session called Session ID - Session Title. 
-
-![Pic 2](images/IN267-2.jpg)
-
 Enterprise IT landscapes are becoming increasingly complex, hybrid and multi-vendor. APIs are used to expose a company's data and make enterprise assets available to internal and external business users. As the interfaces of the digital building blocks of composable architectures, APIs:
 
 -   Provide interoperability and data sharing between software systems.
 -   Enable the integration and innovation of new products and services.
 -   Are critical for creating an ecosystem of 3rd party solutions.
 -   Are a source of revenue in the cloud-native economy.
+
+![Pic 2](images/IN267-2.jpg)
 
 APIs are often exposed to 3rd parties, including business partners and customers. More and more businesses are using APIs to generate new revenue streams, such as through consumption-based pricing or pay-per-use models.
 
@@ -28,10 +26,6 @@ SAP is aware of the importance of APIs, their security, and management. The API 
 In this session, we will take a deeper look at SAP’s API Management solution, by building a data graph extension, and protecting this with an API Proxy with the appropriate security policies.
 
 Start the exercises [here](exercise/README.md).
-
-**IMPORTANT**
-
-Your repo must contain the .reuse and LICENSES folder and the License section below. DO NOT REMOVE the section or folders/files. Also, remove all unused template assets(images, folders, etc) from the exercises folder. 
 
 ## Contributing
 Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) to understand the contribution guidelines.
