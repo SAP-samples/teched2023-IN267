@@ -210,7 +210,7 @@ and substitute \<url\> with the URL of the API proxy with the entity query, and 
 
 The response should look like this:
 
-`{"@odata.context":"$metadata\#RatedPartner","value":[{"id":"my.custom\~1000000","name":"HA_SUPPLIER","isActive":true,"rating":{"Moodys":"ABB","Fitch":"B","StandardPoor":"B+","totalScore":"acceptable"}}]}`
+`{"@odata.context":"$metadata#RatedPartner","value":[{"id":"my.custom\~1000000","name":"HA_SUPPLIER","isActive":true,"rating":{"Moodys":"ABB","Fitch":"B","StandardPoor":"B+","totalScore":"acceptable"}}]}`
 
 Repeat this last command a few times. What happens? Cool, no?
 
