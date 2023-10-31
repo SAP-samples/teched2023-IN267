@@ -180,7 +180,7 @@ We will check this out further in the next step. Copy the URL of the API Proxy f
 
 The API proxy that we just created has no specific authentication policy; the OAuth authentication credentials are simply passed to the data graph. In this step, we will use the “curl” command to obtain an authentication token, and then use that token to make a call to the API.
 
-Open a command terminal on your PC (on Windows, use <win> R, and enter `cmd`).
+Open a command terminal on your PC (on Windows, use \<win\> R, and enter `cmd`).
 
 In the terminal that opens, type:
 
