@@ -128,7 +128,9 @@ In the following step, we will add an API Proxy to the Graph API, which will hav
 
 You should still be on the Graph page in the SAP Integration Suite (if not, click `Design => Graph`). Find the data graph we just created in the list. Carefully *copy* the URL of that data graph.
 
-From the menu, click `Design => APIs` and then `Create`.
+From the menu, click `Configure => APIs` and then `Create`.
+
+Note: The image below shows the APIs under Design. With the recent launch of Edge Integration Cell, some of the navigation items have been adjusted and thus you may find APIs being placed under the Configure section
 
 ![](images/cbe3d300b1834a52b724ee3edc711da5.png)
 
@@ -220,7 +222,7 @@ What if we want to enable “anonymous” and unauthenticated (but still careful
 
 For this, we will learn how to use a *Policy Template,* called “`Cloud_Platform_Connectivity`”. You can find this policy template, and many, many more on the SAP Business Accelerator Hub. The documentation for the template we are using can be found here: <https://hub.sap.com/policytemplate/Cloud_Platform_Connectivity>.
 
-Go back to `Design => APIs` in the SAP Integration Suite application.
+Go back to `Configure => APIs` in the SAP Integration Suite application.
 
 Select your API proxy from the list of APIs. At the top, click `Policies` and on the Policy Editor, click `Edit`.
 
@@ -273,7 +275,9 @@ What is an API good for, if developers don’t know about it?
 
 In this step, we will create an API grouping, called a *Product*, and then *publish* the group of APIs to the API Business Hub Enterprise (ABHE), where developers with be able to learn about the API.
 
-From the menu, click `Design => APIs`, click on the `Products` tab and then `Create`. Give the product a unique name, like `u31-myproduct`:
+From the menu, click `Engage', click on the `Products` tab and then `Create`. Give the product a unique name, like `u31-myproduct`:
+
+Note: With the recent launch of Edge Integration Cell, some of the navigation items have been adjusted and thus you will find Products being placed under the Engage section
 
 ![](images/ae2bca91bb0c1341a4606a584d6ccd54.png)
 
